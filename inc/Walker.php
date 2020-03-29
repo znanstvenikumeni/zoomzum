@@ -47,7 +47,7 @@ class Class_Walker extends Walker_Nav_Menu
             and $attributes .= ' href="'   . esc_attr( get_permalink($item)        ) .'"';
 
 
-        $title = apply_filters( 'the_title', $item->post_title, $item->ID );
+        $title = apply_filters( 'the_title', $item->title, $item->ID );
 
         $item_output =
             "<a class=\"nav-link\" $attributes>"
