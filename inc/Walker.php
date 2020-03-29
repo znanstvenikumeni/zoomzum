@@ -44,7 +44,7 @@ class Class_Walker extends Walker_Nav_Menu
         ! empty( $item->xfn )
             and $attributes .= ' rel="'    . esc_attr( $item->xfn        ) .'"';
         ! empty( $item->ID )
-            and $attributes .= ' href="'   . esc_attr( get_permalink($item)        ) .'"';
+            and $attributes .= ' href="'   . esc_attr( $item->url       ) .'"';
 
 
         $title = apply_filters( 'the_title', $item->title, $item->ID );
